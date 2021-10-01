@@ -8,7 +8,4 @@ class TotalView(APIView):
     throttle_classes = [UserRateThrottle]
 
     def get(self, request,  format=None):
-        content = {
-            'status': 'request was permitted'
-        }
         return Response(data=SumNumber.get_total_vlaue())
